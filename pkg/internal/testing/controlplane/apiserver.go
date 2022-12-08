@@ -374,7 +374,7 @@ func (s *APIServer) populateAPIServerCerts() error {
 		return err
 	}
 
-	servingCerts, err := ca.NewServingCert()
+	servingCerts, err := ca.NewServingCert("host.docker.internal")
 	if err != nil {
 		return err
 	}
